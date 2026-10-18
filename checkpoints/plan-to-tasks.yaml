@@ -1,0 +1,148 @@
+metadata:
+  generated: "2026-10-18"
+  source_plan: "plan.md"
+  target_tasks: "plan.md#task-breakdown"
+
+summary:
+  total_plan_items: 9
+  covered_plan_items: 9
+  missing_plan_items: 0
+  coverage_percentage: 100.0
+  total_tasks_generated: 23
+  orphan_tasks: 0
+
+phases:
+  - phase_id: "Phase-1"
+    phase_name: "Project foundation"
+    items:
+      - item_id: "1.1"
+        description: "Scaffold the frontend and API"
+        tasks:
+          - task_id: "T001"
+            description: "Create Vite React frontend"
+          - task_id: "T002"
+            description: "Create FastAPI package and dependencies"
+      - item_id: "1.2"
+        description: "Establish test and contract foundations"
+        tasks:
+          - task_id: "T003"
+            description: "Configure pytest fixtures"
+          - task_id: "T004"
+            description: "Configure frontend test scripts"
+  - phase_id: "Phase-2"
+    phase_name: "Model-backed API"
+    items:
+      - item_id: "2.1"
+        description: "Adapt and validate the assessment service"
+        tasks:
+          - task_id: "T005"
+            description: "Define API schemas"
+          - task_id: "T006"
+            description: "Define frontend contract types"
+          - task_id: "T007"
+            description: "Implement model/explainer loading"
+          - task_id: "T008"
+            description: "Implement model adapter"
+      - item_id: "2.2"
+        description: "Expose assessment, what-if, explanation, and admin data"
+        tasks:
+          - task_id: "T009"
+            description: "Implement FastAPI routes with model-predicted class"
+          - task_id: "T010"
+            description: "Implement CSV logging and admin API, including optional training metrics"
+          - task_id: "T011"
+            description: "Add backend integration tests"
+  - phase_id: "Phase-3"
+    phase_name: "Applicant journeys"
+    items:
+      - item_id: "3.1"
+        description: "Landing and applicant assessment"
+        tasks:
+          - task_id: "T012"
+            description: "Create layout, landing page, and routes"
+          - task_id: "T013"
+            description: "Build the applicant form"
+          - task_id: "T014"
+            description: "Connect typed API and transient state"
+      - item_id: "3.2"
+        description: "Assessment results and explainability"
+        tasks:
+          - task_id: "T015"
+            description: "Build assessment results page"
+          - task_id: "T016"
+            description: "Build SHAP/LIME explanation page"
+      - item_id: "3.3"
+        description: "What-if analysis"
+        tasks:
+          - task_id: "T017"
+            description: "Build scenario controls and comparisons"
+          - task_id: "T018"
+            description: "Test scenario boundaries and rendering"
+  - phase_id: "Phase-4"
+    phase_name: "Admin dashboard"
+    items:
+      - item_id: "4.1"
+        description: "Show MVP application metrics and anomaly flags"
+        tasks:
+          - task_id: "T019"
+            description: "Build approval/risk metrics, charts, offline metrics, and anomaly rows"
+          - task_id: "T020"
+            description: "Test populated and empty admin data"
+  - phase_id: "Phase-5"
+    phase_name: "Integration and release readiness"
+    items:
+      - item_id: "5.1"
+        description: "Verify journeys, accessibility, and local operation"
+        tasks:
+          - task_id: "T021"
+            description: "Add Playwright end-to-end journeys"
+          - task_id: "T022"
+            description: "Verify accessibility, responsive behavior, and API integration"
+          - task_id: "T023"
+            description: "Document local setup and limitations"
+
+missing_plan_items: []
+orphan_tasks: []
+
+upstream_trace:
+  - plan_item: "1.1"
+    source_requirements: ["REQ-003", "REQ-008"]
+    tasks: ["T001", "T002"]
+    full_trace: "REQ-003,REQ-008 → Phase-1.1 → T001,T002"
+  - plan_item: "1.2"
+    source_requirements: ["REQ-002", "REQ-003", "REQ-004", "REQ-005", "REQ-006", "REQ-007"]
+    tasks: ["T003", "T004"]
+    full_trace: "REQ-002,REQ-003,REQ-004,REQ-005,REQ-006,REQ-007 → Phase-1.2 → T003,T004"
+  - plan_item: "2.1"
+    source_requirements: ["REQ-002", "REQ-003", "REQ-008"]
+    tasks: ["T005", "T006", "T007", "T008"]
+    full_trace: "REQ-002,REQ-003,REQ-008 → Phase-2.1 → T005,T006,T007,T008"
+  - plan_item: "2.2"
+    source_requirements: ["REQ-003", "REQ-004", "REQ-005", "REQ-006", "REQ-007", "REQ-008"]
+    tasks: ["T009", "T010", "T011"]
+    full_trace: "REQ-003,REQ-004,REQ-005,REQ-006,REQ-007,REQ-008 → Phase-2.2 → T009,T010,T011"
+  - plan_item: "3.1"
+    source_requirements: ["REQ-001", "REQ-002"]
+    tasks: ["T012", "T013", "T014"]
+    full_trace: "REQ-001,REQ-002 → Phase-3.1 → T012,T013,T014"
+  - plan_item: "3.2"
+    source_requirements: ["REQ-004", "REQ-005"]
+    tasks: ["T015", "T016"]
+    full_trace: "REQ-004,REQ-005 → Phase-3.2 → T015,T016"
+  - plan_item: "3.3"
+    source_requirements: ["REQ-006"]
+    tasks: ["T017", "T018"]
+    full_trace: "REQ-006 → Phase-3.3 → T017,T018"
+  - plan_item: "4.1"
+    source_requirements: ["REQ-007"]
+    tasks: ["T019", "T020"]
+    full_trace: "REQ-007 → Phase-4.1 → T019,T020"
+  - plan_item: "5.1"
+    source_requirements: ["REQ-001", "REQ-002", "REQ-003", "REQ-004", "REQ-005", "REQ-006", "REQ-007", "REQ-008"]
+    tasks: ["T021", "T022", "T023"]
+    full_trace: "REQ-001..REQ-008 → Phase-5.1 → T021,T022,T023"
+
+validation:
+  passed: true
+  errors: []
+  warnings: []

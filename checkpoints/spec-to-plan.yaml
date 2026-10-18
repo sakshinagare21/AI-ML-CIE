@@ -1,0 +1,140 @@
+metadata:
+  generated: "2026-10-18"
+  source_spec: "User-provided frontend brief in conversation"
+  target_plan: "plan.md"
+
+summary:
+  total_requirements: 8
+  covered_requirements: 8
+  missing_requirements: 0
+  coverage_percentage: 100.0
+
+requirements:
+  - req_id: "REQ-001"
+    req_description: "Landing page and clear assessment navigation"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Applicant journeys"
+      items:
+        - item_id: "3.1"
+          description: "Landing and applicant assessment"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-002"
+    req_description: "Collect and validate applicant inputs"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Applicant journeys"
+      items:
+        - item_id: "1.2"
+          description: "Establish test and contract foundations"
+        - item_id: "2.1"
+          description: "Adapt and validate the assessment service"
+        - item_id: "3.1"
+          description: "Landing and applicant assessment"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-003"
+    req_description: "Serve predictions through Python/FastAPI and existing models"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "Model-backed API"
+      items:
+        - item_id: "1.1"
+          description: "Scaffold the frontend and API"
+        - item_id: "1.2"
+          description: "Establish test and contract foundations"
+        - item_id: "2.1"
+          description: "Adapt and validate the assessment service"
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-004"
+    req_description: "Show all assessment outcome fields and recommendation"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Applicant journeys"
+      items:
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "3.2"
+          description: "Assessment results and explainability"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-005"
+    req_description: "Explain individual predictions using SHAP and LIME"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Applicant journeys"
+      items:
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "3.2"
+          description: "Assessment results and explainability"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-006"
+    req_description: "Compare what-if applicant scenarios"
+    priority: "P2"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Applicant journeys"
+      items:
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "3.3"
+          description: "What-if analysis"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+  - req_id: "REQ-007"
+    req_description: "Show admin application/approval metrics, risk distribution, offline model metrics, and anomaly flags"
+    priority: "P2"
+    plan_mapping:
+      phase: "Phase-4"
+      phase_name: "Admin dashboard"
+      items:
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "4.1"
+          description: "Show MVP application metrics and anomaly flags"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: "Admin is local/demo only until authentication and authorization are designed."
+  - req_id: "REQ-008"
+    req_description: "Keep saved ML models and prediction execution in Python"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Project foundation"
+      items:
+        - item_id: "1.1"
+          description: "Scaffold the frontend and API"
+        - item_id: "2.1"
+          description: "Adapt and validate the assessment service"
+        - item_id: "2.2"
+          description: "Expose assessment, what-if, explanation, and admin data"
+        - item_id: "5.1"
+          description: "Verify journeys, accessibility, and local operation"
+    notes: ""
+
+missing_requirements: []
+orphan_plan_items: []
+
+validation:
+  passed: true
+  errors: []
+  warnings:
+    - "Formal feature-spec, architecture, data-model, and constitution artifacts were not supplied; the plan uses the user brief and existing source behavior."
+    - "Login, durable history, PDF reports, and review-status writes are explicitly deferred."
